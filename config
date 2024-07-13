@@ -46,7 +46,7 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+b exec brave-browser
 
 # kill focused window
-bindsym $mod+Shift+q kill
+bindsym $mod+backspace kill
 
 # start dmenu (a program launcher)
 bindsym $mod+space exec --no-startup-id dmenu_run
@@ -72,7 +72,7 @@ bindsym $mod+Shift+l move right
 #bindsym $mod+h split h
 
 # toggle orientation in vertical and horizontal
-bindsym $mod+v layout toggle split
+bindsym $mod+v split toggle 
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -175,7 +175,7 @@ bar {
         status_command i3status
 }
 
-for_window [class=".*"] border none
+for_window [class=".*"] border pixel 2
 
 gaps outer 4
 gaps inner 4
