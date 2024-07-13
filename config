@@ -46,7 +46,7 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+b exec brave-browser
 
 # kill focused window
-bindsym $mod+backspace kill
+bindsym $mod+BackSpace kill
 
 # start dmenu (a program launcher)
 bindsym $mod+space exec --no-startup-id dmenu_run
