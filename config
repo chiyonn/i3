@@ -133,8 +133,8 @@ bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
 # step around workspaces
-bindsym $alt+Tab workspace next
-bindsym $alt+Shift+Tab workspace prev
+bindsym $alt+Tab workspace next_on_output
+bindsym $alt+Shift+Tab workspace prev_on_output
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -176,5 +176,5 @@ for_window [class=".*"] border pixel 2
 
 gaps outer 4
 gaps inner 4
-exec --no-startup-id xrandr --output DVI-D-0 --primary --mode 3840x2160 --pos 0x1080 --output HDMI-0 --mode 2560x1080 --pos 640x0
+exec --no-startup-id "xrandr --output DVI-D-0 --primary --mode 3840x2160 --pos 0x1080 --output HDMI-0 --mode 2560x1080 --pos 640x0"
 
