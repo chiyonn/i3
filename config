@@ -41,9 +41,11 @@ floating_modifier $mod
 set $youtube agimnkijcaahngcdmfeangaknmldooml
 
 bindsym $mod+Return exec alacritty
+bindsym $mod+e exec /usr/bin/nautilus
 bindsym $mod+b exec brave-browser
 bindsym $mod+i exec gnome-control-center
 bindsym $mod+y exec brave-browser --app-id=$youtube
+bindsym $mod+Shift+s exec flameshot gui
 
 # kill focused window
 bindsym $mod+BackSpace kill
@@ -80,7 +82,6 @@ bindsym $mod+f fullscreen toggle
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -176,5 +177,8 @@ for_window [class=".*"] border pixel 2
 
 gaps outer 4
 gaps inner 4
+
+# auto start
 exec --no-startup-id "xrandr --output DVI-D-0 --primary --mode 3840x2160 --pos 0x1080 --output HDMI-0 --mode 2560x1080 --pos 640x0"
+exec --no-startup-id "nitrogen --restore"
 
